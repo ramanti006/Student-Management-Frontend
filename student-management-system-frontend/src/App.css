@@ -1,0 +1,57 @@
+.App {
+  text-align: center;
+}
+
+.head
+{
+  text-align: center;
+  color: rgb(19, 137, 184);
+
+}
+
+.divison
+{
+  
+  background-color: #eecdcd;
+  justify-content: center;
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  
+}
+
+.sub
+{
+  display: grid;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+tr:nth-child(even) {
+  background-color: #D6EEEE;
+}
+table, td,th{
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+#btn
+{
+  background-color: #5a7886;
+    padding: 15px;
+    color: white; /* Add this for better visibility of the text */
+    border: solid;
+    border-radius: 4px; /* Add this for rounded corners */
+    cursor : pointer;
+    font-size: 16px; /* Larger font size for better readability */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+
+body {
+  background-color: #eecdcd;
+  color: rgb(19, 137, 184);
+}
