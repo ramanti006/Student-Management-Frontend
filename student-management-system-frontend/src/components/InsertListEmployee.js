@@ -4,11 +4,11 @@ import InsertListEmplyooService from "../services/InsertListEmplyooService";
 const InsertListEmployee = () =>
     {
         const [name, setName] = useState("");
-        const [clg, setclgName] = useState("");
+        const [collgname, setclgName] = useState("");
         
         const [rollno, setrollNo] = useState("");
         const [email, setEmail] = useState("");
-        const [phoneNo, setphoneNo] = useState("");
+        const [phoneno, setphoneNo] = useState("");
         const [department, setDepartment] = useState("");
 
 
@@ -17,16 +17,19 @@ const InsertListEmployee = () =>
             {
                 event.preventDefault();
                 
-                if (name && clg && rollno && email && phoneNo && department) {
+                if (name && collgname && rollno && email && phoneno && department) {
                     const studentData = {
                         name,
-                        clg,
+                        collgname,
                         rollno,
                         email,
-                        phoneNo,
+                        phoneno,
                         department
                     };
                     const studentList = [studentData];
+                    //const jsonString = JSON.stringify(studentList);
+
+                    //console.log(jsonString);
 
                     InsertListEmplyooService.InsertAllStudents(studentList)
                         .then(response => {
@@ -68,10 +71,10 @@ const InsertListEmployee = () =>
             
             College Name :
             <input
-             type="text"
+            type="text"
             className="input"
             placeholder="college"
-            value={clg}
+            value={collgname}
             onChange={(event) => {
             setclgName(event.target.value);}}
             />
@@ -98,10 +101,10 @@ const InsertListEmployee = () =>
              
             Contact Number:
             <input
-             type="number"
+             type="text"
             className="input"
             placeholder="Phone"
-            value={phoneNo}
+            value={phoneno}
             onChange={(event) => {
             setphoneNo(event.target.value);}}
             />
@@ -117,7 +120,7 @@ const InsertListEmployee = () =>
             />
 
             <div className="sub" >
-            <button type="submit" onClick={handelInsertAllStudent}>Submit</button>
+            <button  className="btn" type="submit" onClick={handelInsertAllStudent}>Submit</button>
             </div>
             
              

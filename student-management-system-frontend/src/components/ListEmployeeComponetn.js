@@ -25,7 +25,7 @@ const ListEmployeeComponent = () =>
 
         return(
           <>
-          <h2 className="head">List Student</h2>
+          <h2 className="head">Student List</h2>
            <div className ="divison">
               
               <table className="tab">
