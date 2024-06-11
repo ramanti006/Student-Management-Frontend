@@ -1,5 +1,6 @@
 
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
 import ListEmployeeComponetn from './components/ListEmployeeComponetn';
 import OneEmployee from './components/OneEmployee';
 import DeleteByIdComponent from './components/DeleteByIdComponent';
@@ -10,7 +11,7 @@ function App() {
     <>
    
    
-   <InsertListEmployee/>
+   <StudentMainPage/>
 
     </>
   )
