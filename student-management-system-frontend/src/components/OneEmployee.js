@@ -1,8 +1,11 @@
 import React,{useEffect, useState} from "react";
-import OneEmploeeService from '../services/OneEmploeeService';
+import EmployeeService from '../services/EmployeeService';
 
 const OneEmployee =() =>
     {
+
+        const employeeService = EmployeeService;
+
         const [inputValue, setInputValue] = useState("")
         const[students, setStudents] = useState(null);
         const [hasSearched, setHasSearched] = useState(false);
@@ -12,7 +15,7 @@ const OneEmployee =() =>
                 event.preventDefault();
                 setHasSearched(true);
 
-                OneEmploeeService.getOneEmployee(inputValue).then((response)=>
+                employeeService.getOneEmployee(inputValue).then((response)=>
                 {
                     setStudents(response.data.data);
                     console.log(response.data.data);
@@ -29,10 +32,10 @@ const OneEmployee =() =>
 
         return(
           <>
-          <h2 className="head">Student</h2>
+          <h2 className="head">One Student Detail</h2>
            <div className ="divison">
 
-           <h3>Please give the id to get student's information</h3>
+           <h3 >Please give the id to get student's information</h3>
         
 
         <input
@@ -45,7 +48,7 @@ const OneEmployee =() =>
         />
         <br>
     </br>
-         <button className="btn" onClick={handelShowOneStudent}>Check</button>
+         <button className="greenbtn" onClick={handelShowOneStudent}>Check</button>
          {hasSearched && (
          students ? ( 
                     <table className="tab">

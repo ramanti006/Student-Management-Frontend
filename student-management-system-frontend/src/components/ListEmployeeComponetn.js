@@ -3,13 +3,15 @@ import EmployeeService from '../services/EmployeeService';
 
 const ListEmployeeComponent = () => 
     {
+        const employeeService = EmployeeService;
+
 
         const[students, setStudents] = useState([]);
 
         useEffect(() =>
             {
 
-                EmployeeService.getAllEmployee().then((response)=>
+                employeeService.getAllEmployee().then((response)=>
                 {
                     setStudents(response.data.data);
                     console.log(response.data.data);

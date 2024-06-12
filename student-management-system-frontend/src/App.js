@@ -1,6 +1,6 @@
 
 import './App.css';
-import { Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import ListEmployeeComponetn from './components/ListEmployeeComponetn';
 import OneEmployee from './components/OneEmployee';
 import DeleteByIdComponent from './components/DeleteByIdComponent';
@@ -11,7 +11,15 @@ function App() {
     <>
    
    
-   <StudentMainPage/>
+   <Router>
+      <Routes>
+        <Route  path="/" element={<StudentMainPage/>}/>
+        <Route  path="/showAllStudent" element={<ListEmployeeComponetn/>}/>
+        <Route  path="/OneStudent" element={<OneEmployee/>}/>
+        <Route  path="/insert" element={<InsertListEmployee/>} />
+        <Route  path="/delete" element={<DeleteByIdComponent/>}/>
+      </Routes>
+    </Router>
 
     </>
   )
