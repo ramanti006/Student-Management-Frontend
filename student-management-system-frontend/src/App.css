@@ -45,15 +45,14 @@ table{
 #btn
 {
     background-color: #5a7886;
-    padding: 15px;
-    margin :10px 20px;
+    margin : 5px 10px;
+    padding: 10px 20px;
     color : white; /* Add this for better visibility of the text */
     border: solid;
     border-radius: 4px; /* Add this for rounded corners */
     border-color: rgb(167, 116, 162) ;
     cursor : pointer;
     font-size: 20px; /* Larger font size for better readability */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
     height : 90px;
     width : 400px;
 }
@@ -63,4 +62,42 @@ table{
 body {
   background-color: #eecdcd;
   color: rgb(19, 137, 184);
+}
+
+.redbtn
+{
+  padding: 10px 20px;
+  margin : 5px  auto 10px auto;
+  justify-content: center;
+  background-color: rgb(197, 7, 7);
+  border-radius: 4px; /* Add this for rounded corners */
+  border-color: rgb(160, 160, 12) ;
+  cursor : pointer;
+  font-size: 15px; /* Larger font size for better readability */
+  color : rgb(15, 1, 11);
+ 
+  
+}
+
+.input
+{
+  padding: 10px 20px;
+  margin : 5px  auto 10px auto;
+  justify-content: center;
+  border-radius: 4px; /* Add this for rounded corners */
+  border-color: rgb(167, 116, 162) ;
+
+}
+
+.greenbtn
+{
+  padding: 10px 20px;
+  margin : 5px  auto 10px auto;
+  justify-content: center;
+  background-color: rgb(3, 109, 17);
+  border-radius: 4px; /* Add this for rounded corners */
+  border-color: rgb(28, 156, 60) ;
+  cursor : pointer;
+  font-size: 15px; /* Larger font size for better readability */
+  color : rgb(15, 1, 11);
 }

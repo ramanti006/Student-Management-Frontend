@@ -1,8 +1,11 @@
 import React,{useEffect, useState} from "react";
-import InsertListEmplyooService from "../services/InsertListEmplyooService";
+import EmployeeService from '../services/EmployeeService';
 
 const InsertListEmployee = () =>
     {
+
+        const employeeService = EmployeeService;
+
         const [name, setName] = useState("");
         const [collgname, setclgName] = useState("");
         
@@ -31,7 +34,7 @@ const InsertListEmployee = () =>
 
                     //console.log(jsonString);
 
-                    InsertListEmplyooService.InsertAllStudents(studentList)
+                    employeeService.InsertAllStudents(studentList)
                         .then(response => {
                             console.log("Student data inserted successfully", response);
                         })
@@ -56,8 +59,10 @@ const InsertListEmployee = () =>
             }
 
         return(
+            <>
+            <h2 className="head"> Register Student</h2>
             <div className='divison'>
-             <h2>Insert Student Detail</h2>
+             <h3>Insert Student Detail</h3>
 
              Student Name :
              <input
@@ -73,7 +78,7 @@ const InsertListEmployee = () =>
             <input
             type="text"
             className="input"
-            placeholder="college"
+            placeholder="College"
             value={collgname}
             onChange={(event) => {
             setclgName(event.target.value);}}
@@ -83,7 +88,7 @@ const InsertListEmployee = () =>
             <input
              type="number"
             className="input"
-            placeholder="Roll No"
+            placeholder="Roll Number"
             value={rollno}
             onChange={(event) => {
             setrollNo(event.target.value);}}
@@ -93,7 +98,7 @@ const InsertListEmployee = () =>
             <input
              type="email"
             className="input"
-            placeholder="email"
+            placeholder="Email"
             value={email}
             onChange={(event) => {
             setEmail(event.target.value);}}
@@ -103,7 +108,7 @@ const InsertListEmployee = () =>
             <input
              type="text"
             className="input"
-            placeholder="Phone"
+            placeholder="Phone Number"
             value={phoneno}
             onChange={(event) => {
             setphoneNo(event.target.value);}}
@@ -113,18 +118,19 @@ const InsertListEmployee = () =>
             <input
              type="text"
             className="input"
-            placeholder="department"
+            placeholder="Department"
             value={department}
             onChange={(event) => {
             setDepartment(event.target.value);}}
             />
 
             <div className="sub" >
-            <button  className="btn" type="submit" onClick={handelInsertAllStudent}>Submit</button>
+            <button  className='greenbtn' type="submit" onClick={handelInsertAllStudent}>Submit</button>
             </div>
             
              
              </div>
+             </>
 
 
         );
