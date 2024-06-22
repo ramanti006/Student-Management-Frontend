@@ -26,7 +26,9 @@ function StudentMainPage()
       <button id = "btn">Insert</button>
       </Link>
 
+      <Link to="/OneStudent">
       <button id = "btn">Update</button>
+      </Link>
 
       <Link to="/delete">
       <button id = "btn">Delete</button>
