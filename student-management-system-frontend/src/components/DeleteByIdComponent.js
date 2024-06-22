@@ -49,9 +49,10 @@ const DeleteByIdComponent = () =>
     <button className='redbtn' onClick={handleDelete}>Delete</button>
       {message && (
         <p>
-          {message === "SUCCESSFUL!"
-            ? "Student record deleted from database"
-            : "Student record not present in database"}
+          {message == "SUCCESSFUL!"
+            ? alert("Student record deleted from database")
+            : alert("Student record not present in database")
+            }
         </p>
       )}
         
