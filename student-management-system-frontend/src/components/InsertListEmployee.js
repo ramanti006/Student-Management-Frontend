@@ -14,12 +14,21 @@ const InsertListEmployee = () =>
         const [phoneno, setphoneNo] = useState("");
         const [department, setDepartment] = useState("");
 
-
-
-        const handelInsertAllStudent = (event) =>
+        const resetInput =(event) =>
             {
                 event.preventDefault();
-                
+                setName("");
+                setclgName("");
+                setrollNo("");
+                setEmail("");
+                setphoneNo("");
+                setDepartment("");
+
+            }
+
+            const handelInsertAllStudent = (event) => {
+                event.preventDefault();
+        
                 if (name && collgname && rollno && email && phoneno && department) {
                     const studentData = {
                         name,
@@ -30,13 +39,13 @@ const InsertListEmployee = () =>
                         department
                     };
                     const studentList = [studentData];
-                    //const jsonString = JSON.stringify(studentList);
-
-                    //console.log(jsonString);
-
+        
                     employeeService.InsertAllStudents(studentList)
                         .then(response => {
+                            //const stu = response.data;
                             console.log("Student data inserted successfully", response);
+                            alert("Student data inserted successfully");
+                            resetInput(event); // Reset input fields after successful submission
                         })
                         .catch(error => {
                             console.error("There was an error inserting the student data!", error);
@@ -45,17 +54,11 @@ const InsertListEmployee = () =>
                                 console.error("Error Response Status:", error.response.status);
                                 console.error("Error Response Headers:", error.response.headers);
                             }
+                            alert("There was an error inserting the student data!");
                         });
                 } else {
                     alert("Please fill in all fields");
                 }
-            
-        
-
-
-
-
-
             }
 
         return(
@@ -63,7 +66,7 @@ const InsertListEmployee = () =>
             <h2 className="head"> Register Student</h2>
             <div className='divison'>
              <h3>Insert Student Detail</h3>
-
+            
              Student Name :
              <input
              type="text"
@@ -125,8 +128,10 @@ const InsertListEmployee = () =>
             />
 
             <div className="sub" >
-            <button  className='greenbtn' type="submit" onClick={handelInsertAllStudent}>Submit</button>
+            <button  className='greenbtn' type="submit" onClick={handelInsertAllStudent} >Submit</button> <button  className='blubtn' onClick={resetInput} >Reset</button>
+         
             </div>
+            
             
              
              </div>
