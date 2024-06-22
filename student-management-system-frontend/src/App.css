@@ -101,3 +101,29 @@ body {
   font-size: 15px; /* Larger font size for better readability */
   color : rgb(15, 1, 11);
 }
+
+.popUP
+{
+  padding: 10px 20px;
+  margin : 5px  auto 10px auto;
+  justify-content: center;
+  background-color: white;
+  border-radius: 6px; /* Add this for rounded corners */
+  border-color: rgb(28, 83, 156) ;
+  font-size: 15px; /* Larger font size for better readability */
+  color : rgb(15, 1, 11);
+
+}
+
+.blubtn
+{
+  padding: 10px 5px;
+  margin : 5px  auto 5px auto;
+  justify-content: center;
+  background-color: rgb(83, 72, 145);
+  border-radius: 4px; /* Add this for rounded corners */
+  border-color: rgb(26, 69, 134) ;
+  cursor : pointer;
+  font-size: 15px; /* Larger font size for better readability */
+  color : white;
+}
